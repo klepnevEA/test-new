@@ -1,0 +1,83 @@
+.experience-js {
+    display: block;
+    padding-top: 50px;
+}
+
+.experience-js__range {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background-image: url('../img/range.svg');
+    background-size: 100% auto;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    
+}
+
+.experience-js__range-fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    overflow: hidden;
+    background-image: url('../img/range-fill.svg');
+    background-size: 100% auto;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+.experience-js__list {
+    display: flex;
+    justify-content: space-between;
+    height: 10px;
+}
+
+.experience-js__elem {
+    position: relative;
+
+    @include tablets {
+        &:nth-child(even) {
+            .experience-js__text {
+                top: -70px;
+            }
+        }
+    }
+
+    &:first-child {
+
+        .experience-js__text {
+            transform: translate(0, 0);
+        }
+    }
+
+    &:last-child {
+        .experience-js__text {
+            right: 0;
+            transform: translate(0, 0);
+        }
+    }
+}
+
+.experience-js__text {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    font-size: 13px;
+    font-family: $roboto-light-font;
+    color: $black-2;
+    white-space: nowrap;
+    transform: translate(-50%, 0);
+    text-align: center;
+
+
+}
+
+.experience-js__dots {
+    position: absolute;
+    left: -1px;
+    top: -12px;
+    height: 8px;
+    border-left: 1px dotted $black;
+}
