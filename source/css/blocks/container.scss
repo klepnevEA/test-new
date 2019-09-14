@@ -1,0 +1,37 @@
+.container {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  flex: 0 0 auto;
+
+  &--flex {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &--width-520px {
+    max-width: 520px;
+  }
+
+  .container__marker-icon {
+    margin-bottom: 20px;
+  }
+  
+  .container__title {
+    margin-bottom: 43px;
+  }
+
+  .container__text-about-me {
+    margin-bottom: 35px;
+    margin-top: 7px;
+    line-height: 1.5;
+  }
+
+  .container__textarea {
+    height: 180px;
+    margin-bottom: 66px;
+  }
+}
+
+

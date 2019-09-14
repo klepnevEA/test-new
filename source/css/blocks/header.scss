@@ -1,0 +1,68 @@
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    background-color: #fff;
+    height: 81px;
+    border-bottom: 1px solid $gray-border;
+    transition: top 0.3s;
+
+    @include tablets {
+        height: 100vh;
+        top: -100vh;
+    }
+
+    &.header--open-mobile {
+        @include tablets {
+            top: 0;
+        }
+    }
+}
+
+.header-open {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    right: -60px;
+    z-index: 200;
+    transition: right 0.3s;
+
+    @include tablets {
+        right: 0px;
+    }
+}
+
+.header-open__icon {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #000;
+    border-radius: 50%;
+
+    &:after,
+    &:before {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        background-color: #000;
+        border-radius: 50%;
+        position: absolute;
+        top: -10px;
+        left: 0;
+    }
+
+    &:before {
+        top: auto;
+        bottom: -10px;
+    }
+}
+
+  

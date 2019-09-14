@@ -1,0 +1,13 @@
+.textarea {
+    width: 100%;
+    min-height: 60px;
+    padding: 20px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    transition: border 0.3s;
+    font-size: 20px;
+    font-family: $roboto-regular-font;
+    color: $gray;
+    background-color: #fff;
+    resize: none;
+}

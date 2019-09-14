@@ -1,0 +1,28 @@
+.checkbox-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkbox-list__elem {
+    flex: 0 0 auto;
+    width: calc(100% / 3 - 47px);
+    margin-bottom: 14px;
+    margin-right: 70px;
+
+    &:nth-child(3n){
+        margin-right: 0px;
+    }
+
+    @include tablets {
+        width: calc(100% / 2 - 47px);
+        &:nth-child(odd){
+            margin-right: 0px;
+        }
+    }
+
+    @include phones {
+        width: 100%;
+        margin-right: 0px;
+        padding: 0 20px;
+    }
+}

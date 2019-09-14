@@ -1,0 +1,59 @@
+.checkbox {
+    cursor: pointer;
+
+    &:hover {
+        .checkbox__btn {
+            background-color: $blue-light;
+        }
+    }
+}
+
+.checkbox__input {
+    position: absolute;
+    visibility: hidden;
+
+    &:checked {
+        & + .checkbox__content {
+            .checkbox__btn {
+                background-color: $blue;
+            }
+
+            .checkbox__check {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.checkbox__content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid $blue;
+    margin-right: 13px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+  .checkbox__check {
+      width: 15px;
+      height: 15px;
+      fill: #fff;
+      opacity: 0;
+      transition: opacity 0.3s;
+  }
+
+  .checkbox__text {
+    font-size: 16px;
+    font-family: $roboto-light-font;
+    color: #000;
+  }

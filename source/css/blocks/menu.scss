@@ -1,0 +1,46 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.menu__list {
+    display: flex;
+
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
+.menu__elem {
+    display: flex;
+
+    &--active {
+        .menu__link {
+            color: $black;
+        }
+    }
+}
+
+.menu__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 37px;
+    font-size: 14px;
+    font-family: $roboto-light-font;
+    color: $blue;
+    transition: color 0.3s;
+
+    &:hover {
+        color: $black;
+    }
+
+    @include tablets {
+        width: 100%;
+        text-align: center;
+        padding: 20px 37px;
+    } 
+}

@@ -1,0 +1,11 @@
+.wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	padding-top: 81px;
+
+	@include tablets {
+		padding-top: 0;
+	}
+}
